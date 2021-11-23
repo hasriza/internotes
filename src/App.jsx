@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Button, Col, Input, Row } from "antd";
-import { clearFirst, getNotes, setNotes } from "./helpers/notesManager";
+import { getNotes, setNotes } from "./helpers/notesManager";
 
 import NotesComponent from "./components/NotesComponent";
 import NotesNetworkComponent from "./components/NotesNetwork";

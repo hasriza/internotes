@@ -1,4 +1,4 @@
-import { Button, Divider, Modal, message } from "antd";
+import { Button, Divider, Modal, Result, message } from "antd";
 import { useEffect, useState } from "react";
 
 import { Graph } from "react-d3-graph";
@@ -87,13 +87,21 @@ const NotesNetworkComponent = (props) => {
       <Divider orientation="center">
         <h3>Network of {props.selectedNote.title}</h3>
       </Divider>
-      <Graph
-        id="notesNetwork"
-        data={graphData}
-        config={graphConfig}
-        onDoubleClickNode={onDoubleClickNode}
-        onClickNode={onClickNode}
-      />
+      {graphData.links.length > 0 ? (
+        <Graph
+          id="notesNetwork"
+          data={graphData}
+          config={graphConfig}
+          onDoubleClickNode={onDoubleClickNode}
+          onClickNode={onClickNode}
+        />
+      ) : (
+        <Result
+          status="404"
+          title="Links not found"
+          subTitle={`Sorry, there are no links for ${props.selectedNote.title}`}
+        />
+      )}
 
       <Modal
         visible={showInfo}
