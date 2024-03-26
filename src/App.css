@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.App-header {
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 10px 0px;
+}
+
+.leftHandSection {
+  display: flex;
+  flex-direction: column;
+  width: "100%";
+  margin-left: 10px;
+  align-items: center;
+}
+
+.leftHandItems {
+  margin: 5px 10px;
+  width: 100%;
+}
+
+.rightHandItems {
+  width: 95%;
+  height: 90vh;
+  background-color: white;
+  border-radius: 10px;
+  margin: 5px 30px;
+  padding: 3%;
+}
